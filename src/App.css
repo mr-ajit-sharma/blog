@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.section{
+  /* background-color: red; */
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+}
+.section>form{
+  width: 80%;
+  height: 40vh;
+  background-color: blue;
+  border-radius: .5em;
+  margin: .5em;
+}
+.input{
+  width: 70%;
+  height: 10%;
+  border: 2px solid black;
+  border-radius: .5em;
+}
+.content{
+  height: 40%;
+}
+hr{
+  width: 50%;
+}
+.blog{
+ border: 2px solid black; 
+ border-radius: .5em;
+ background-color: yellow;
+ margin: 0 auto;
+ margin-bottom: 1em;
+ align-self: center;
+ width: 70%;
+}
+.blog>h3{
+  
+}
