@@ -1,4 +1,4 @@
-import { useState,useRef } from "react";
+import { useState,useRef,useEffect } from "react";
 
 export default function Blog() {
 
@@ -6,8 +6,10 @@ export default function Blog() {
     // const [content,setContent] = useState("");
     const [formData, setFormData] = useState({ title: "", content: "" })
     const [blogs, setBlogs] = useState([]);
-    
     const titleRef=useRef(null)
+    useEffect(()=>{
+        titleRef.current.focus()
+    },[])
     function handleSubmit(e) {
         e.preventDefault();
         setBlogs([{ title: formData.title, content: formData.content }, ...blogs]);
@@ -72,7 +74,7 @@ function Row(props) {
     const { label } = props;
     return (
         <>
-            <label>{label}<br /></label>
+            <label>{label}<br/></label>
             {props.children}
             <hr />
         </>
