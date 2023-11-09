@@ -47,7 +47,7 @@
 .section>form{
   width: 80%;
   height: 40vh;
-  background-color: blue;
+  background-color: rgb(249, 81, 14);
   border-radius: .5em;
   margin: .5em;
 }
@@ -81,8 +81,10 @@ justify-content: end;
   margin: .5em;
   width: 5em;
   height: 2em;
+
 }
-.delete:hover{
+.btn:hover{
+  border-radius: .5em;
   background-color: #282c34;
   color: white;
 }
