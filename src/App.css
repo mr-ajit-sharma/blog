@@ -72,6 +72,17 @@ hr{
  align-self: center;
  width: 70%;
 }
-.blog>h3{
-  
+.mainDelete{
+display: flex;
+justify-content: end;
+}
+.btn{
+  background-color: red;
+  margin: .5em;
+  width: 5em;
+  height: 2em;
+}
+.delete:hover{
+  background-color: #282c34;
+  color: white;
 }

@@ -11,8 +11,12 @@ export default function Blog() {
         e.preventDefault();
 
         setBlogs([{ title: formData.title, content: formData.content }, ...blogs]);
-        // setFormData({ title: "", content: "" })
+        setFormData({ title: "", content: "" })
         // console.log(blogs);
+    }
+
+    function removeBlog(i) {
+        setBlogs(blogs.filter((blog,index)=>i!==index))
     }
 
     return (
@@ -26,7 +30,7 @@ export default function Blog() {
                         <input className="input"
                             value={formData.title}
                             placeholder="Enter the Title of the Blog here.."
-                            onChange={(e) => setFormData({ title: e.target.value,content:formData.content})}
+                            onChange={(e) => setFormData({ title: e.target.value, content: formData.content })}
                         />
                     </Row >
 
@@ -34,7 +38,7 @@ export default function Blog() {
                         <textarea className="input content"
                             value={formData.content}
                             placeholder="Content of the Blog goes here.."
-                            onChange={(e) => setFormData({ title:formData.title,content: e.target.value })}
+                            onChange={(e) => setFormData({ title: formData.title, content: e.target.value })}
                         />
                     </Row >
 
@@ -51,6 +55,9 @@ export default function Blog() {
                 <div key={i} className="blog">
                     <h3>{blog.title}</h3>
                     <p>{blog.content}</p>
+                    <div className="mainDelete">
+                      <button className="btn" onClick={()=>removeBlog(i)}>Delete</button>
+                    </div>
                 </div>
             ))}
 
